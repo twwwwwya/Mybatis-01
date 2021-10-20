@@ -1,0 +1,11 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD UserMapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace 为接口的全类名使用 . 分割-->
+<mapper namespace="com.tangwei.dao.UserMapper">
+
+<!--    id是用方法名  resultType为结果集类型 -->
+    <select id="getUserById" resultType="com.tangwei.pojo.User" >
+        select * from user where id = #{id}
+    </select>
+</mapper>
